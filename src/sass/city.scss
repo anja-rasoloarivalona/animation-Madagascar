@@ -4,6 +4,33 @@
     height: 100vh;
     width: 100vw;
     background: yellow;
+    position: relative;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__map {
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 40rem;
+        object-fit: cover;
+    }
+
+    &__imgContainer, &__text {
+        width: 50%;
+        height: 100%;
+    }
+
+    &__imgContainer {
+        background: red;
+    }
+
+    &__text {
+        background: green;
+    }
 }
 
 .test{

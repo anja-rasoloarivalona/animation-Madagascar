@@ -23,15 +23,18 @@ $('.loader__cta.btn').click( function(){
 
 var intro = new TimelineMax({repeat: -1})
    intro 
-        .to('.intro__img--2', 5, {autoAlpha: 1})
+        .to('.intro__img--2', 5, {autoAlpha: 1},'+=5')
         .to('.intro__img--2', 5, {autoAlpha: 0})
+
+   
+
 
 
 /*--------ANIMATE LINE OF INTRO TEXT----------------------*/
 
 var introText = new TimelineMax()
     introText
-        .to('.intro__text__line__inner', 2, {width: '100%'})
+        .to('.intro__text__line__inner', 2.5, {width: '100%'}, '+=.5')
         .to('.intro__text__layer', 1, {opacity: 1}, '-=.5')
         .to('.intro__text__para', .5, {opacity: 1, y: 0}, '-=.5')
 
