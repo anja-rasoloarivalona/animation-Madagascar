@@ -111,7 +111,8 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: all .3s ease-in; }
   .city__map {
     position: absolute;
     right: 0;
@@ -143,9 +144,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background: rgba(0, 0, 0, 0.473);
-    color: white; }
+    position: relative; }
     .city__resume__text {
       width: 80%;
       font-size: 1.5rem; }
@@ -156,7 +155,6 @@ body {
         z-index: 2000; }
     .city__resume__bg {
       width: 40%;
-      object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;
@@ -164,6 +162,23 @@ body {
       bottom: 0;
       margin: auto;
       z-index: -1; }
+      .city__resume__bg__map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        object-fit: cover; }
+      .city__resume__bg__car {
+        position: absolute;
+        top: 14rem;
+        right: 3rem;
+        bottom: 0;
+        height: 2rem;
+        object-fit: cover;
+        transform: rotate(180deg); }
 
 .test {
   grid-row: 3 / 4;
@@ -182,6 +197,11 @@ body {
     position: absolute;
     bottom: 0;
     right: 10rem; }
+
+.btn--test {
+  position: absolute;
+  top: 10rem;
+  z-index: 2000; }
 
 .intro {
   grid-row: 1 / 2;

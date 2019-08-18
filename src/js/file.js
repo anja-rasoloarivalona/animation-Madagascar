@@ -47,6 +47,13 @@ cities.forEach( function(city){
         })  
 })
 
+$('.btn--test').click(function(){
+        console.log('clicked')
+        window.scroll(0, 0);
+        $('.city').css('grid-row', '1 / 2')
+        $('.intro').css('display', 'none')
+})
+
 
 /*$('.city__resume__text__list--toamasina').mouseenter(function(){
        $('.city__img--toamasina').css('z-index', 2);
