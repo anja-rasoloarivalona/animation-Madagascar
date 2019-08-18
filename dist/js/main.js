@@ -1,0 +1,1 @@
+$(document).ready(function(){(new TimelineMax).set(".loader__cta",{y:20}).to(".loader__subtitle",1,{opacity:1,y:0}).to(".loader__cta",1,{opacity:1,y:0},"+=2"),$(".loader__cta.btn").click(function(){(new TimelineMax).set(".intro__img",{scale:1.2}).to(".loader",".5",{y:"-100vh"}).to(".intro__img",20,{scale:1}).to(".intro__imgContainer",2,{borderRadius:"50%"},"-=20")})});

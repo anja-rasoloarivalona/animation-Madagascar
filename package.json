@@ -1,0 +1,20 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "gulp setup",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "Anja Rasoloarivalona",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/register": "^7.4.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}
