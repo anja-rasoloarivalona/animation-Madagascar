@@ -49,7 +49,6 @@ body {
     flex-direction: column;
     position: relative;
     z-index: 2;
-
     transform: translateY(-100vh);
 
 
@@ -81,10 +80,6 @@ body {
 }
 
 
-
-
-
-
 @keyframes animate1 {
     0% {
         opacity: 0;
@@ -113,4 +108,31 @@ body {
 
 /*----------utilities-----------*/
 
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+    border-radius: 10px;
+    height: 2rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
 
