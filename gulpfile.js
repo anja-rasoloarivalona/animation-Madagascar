@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const terser = require('gulp-terser');
 
 
 
@@ -62,7 +63,7 @@ function minify(){
 function scripts(){
     return src('src/js/*')
     .pipe(concat('main.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream())
 }

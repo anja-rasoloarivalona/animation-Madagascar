@@ -35,6 +35,34 @@ $('.navbar').click( function(){
         }  
 })
 
+var cities = ['tulear', 'majunga', 'toamasina', 'diego', 'fianara'];
+
+cities.forEach( function(city){
+        
+        $(`.city__resume__text__list--${city}`).mouseenter(function(){
+                $(`.city__img--${city}`).css('z-index', 2);
+        })  
+        $(`.city__resume__text__list--${city}`).mouseleave(function(){
+                $(`.city__img--${city}`).css('z-index', '');
+        })  
+})
+
+
+/*$('.city__resume__text__list--toamasina').mouseenter(function(){
+       $('.city__img--toamasina').css('z-index', 2);
+})
+
+$('.city__resume__text__list--majunga').mouseenter(function(){
+        $('.city__img--majunga').css('z-index', 2);
+ })
+
+ $('.city__resume__text__list--toamasina').mouseleave(function(){
+        $('.city__img--toamasina').css('z-index', 0);
+ })
+
+$('.city__resume__text__list--majunga').mouseleave(function(){
+        $('.city__img--majunga').css('z-index', 0);
+ })*/
 
 
 /*---------CHANGE INTRO BACKGROUND IMAGE-----------------*/

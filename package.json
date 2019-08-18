@@ -16,5 +16,8 @@
     "gulp-imagemin": "^6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-terser": "^1.2.0"
   }
 }

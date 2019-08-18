@@ -108,7 +108,6 @@ body {
   grid-column: 1 / -1;
   height: 100vh;
   width: 100vw;
-  background: yellow;
   position: relative;
   display: flex;
   align-items: center;
@@ -119,13 +118,48 @@ body {
     left: 0;
     height: 40rem;
     object-fit: cover; }
-  .city__imgContainer, .city__text {
-    width: 50%;
+  .city__imgContainer, .city__resume {
     height: 100%; }
   .city__imgContainer {
-    background: red; }
-  .city__text {
-    background: green; }
+    background: red;
+    width: 50%;
+    overflow: hidden;
+    position: relative; }
+  .city__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .city__img--tana {
+      z-index: 1; }
+  .city__resume {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+    .city__resume__text {
+      width: 80%;
+      font-size: 1.5rem; }
+      .city__resume__text__list {
+        list-style: none;
+        margin-top: 2rem;
+        position: absolute;
+        z-index: 2000; }
+        .city__resume__text__list--toliary:hover {
+          color: red; }
+    .city__resume__bg {
+      width: 40%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1; }
 
 .test {
   grid-row: 3 / 4;

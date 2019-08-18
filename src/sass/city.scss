@@ -3,7 +3,6 @@
     grid-column: 1 / -1;
     height: 100vh;
     width: 100vw;
-    background: yellow;
     position: relative;
 
 
@@ -19,17 +18,69 @@
         object-fit: cover;
     }
 
-    &__imgContainer, &__text {
-        width: 50%;
+    &__imgContainer, &__resume {      
         height: 100%;
     }
 
     &__imgContainer {
         background: red;
+        width: 50%;
+        overflow: hidden;
+        position: relative;
     }
 
-    &__text {
-        background: green;
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--tana {
+            z-index: 1;
+        }
+
+        &--toliary {
+           //z-index: 2;
+        }
+    }
+
+    &__resume {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &__text {
+            width: 80%;
+            font-size: 1.5rem;
+
+            &__list {
+                list-style: none;
+                margin-top: 2rem;
+                position: absolute;
+                z-index: 2000;
+             
+                &--toliary:hover {
+                    color: red;
+                }
+               
+            }
+        }
+
+        &__bg {
+            width: 40%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: -1;
+        }
     }
 }
 
