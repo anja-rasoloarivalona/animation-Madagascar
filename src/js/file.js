@@ -19,6 +19,24 @@ $('.loader__cta.btn').click( function(){
 
 
 
+var open = false;
+
+$('.navbar').click( function(){
+        if(!open){
+           $('html').css('overflow-y', 'hidden')
+           $(this).addClass("open");
+           $('.nav').addClass("open");
+           return open = true
+        } else {
+          $('html').css('overflow-y', '')
+          $('.nav').removeClass("open");
+          $(this).removeClass("open");
+          return open = false
+        }  
+})
+
+
+
 /*---------CHANGE INTRO BACKGROUND IMAGE-----------------*/
 
 var intro = new TimelineMax({repeat: -1})
@@ -26,7 +44,7 @@ var intro = new TimelineMax({repeat: -1})
         .to('.intro__img--2', 5, {autoAlpha: 1},'+=5')
         .to('.intro__img--2', 5, {autoAlpha: 0})
 
-   
+
 
 
 

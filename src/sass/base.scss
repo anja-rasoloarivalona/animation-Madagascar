@@ -1,5 +1,7 @@
 $colorPrimary: yellow;
 
+$colorWhite: #fff;
+
 
 *,
 *::before,
@@ -109,7 +111,20 @@ body {
 /*----------utilities-----------*/
 
 
+.white {
+    color: white
+}
 
+.flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title--primary {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
 
 
 
