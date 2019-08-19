@@ -54,11 +54,14 @@ $('.btn--test').click(function(){
         var introMove = new TimelineMax()
                 introMove
                 .to('.intro', .1, {opacity: 0}, '+=1') 
-                .to('.city', .1, {y: '-100%'},'-=.5')
+                .to('.city__imgContainer', .1, {display: 'none'}) 
+                .to('.city__resume', .1, {display: 'none'}) 
+              //  .to('.city', .1, {y: '-100%'},'-=.5')
+                .to('.city__section', .1, {display: 'block'},'-=.5')
                
 
         setTimeout( function(){
-            window.scroll(0, 0);
+            window.scroll({top: 0, left: 0, behavior: 'smooth'});
         }, 1500)
      
 

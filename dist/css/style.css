@@ -171,14 +171,6 @@ body {
         margin: auto;
         width: 100%;
         object-fit: cover; }
-      .city__resume__bg__car {
-        position: absolute;
-        top: 14rem;
-        right: 3rem;
-        bottom: 0;
-        height: 2rem;
-        object-fit: cover;
-        transform: rotate(180deg); }
 
 .test {
   grid-row: 3 / 4;
@@ -202,6 +194,39 @@ body {
   position: absolute;
   top: 10rem;
   z-index: 2000; }
+
+.city__section {
+  display: none;
+  background: white; }
+  .city__section__tulear {
+    width: 100vw;
+    height: 100vh;
+    background: salmon;
+    transform: translateY(-150vh); }
+  .city__section__bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative; }
+    .city__section__bg__map {
+      position: fixed;
+      z-index: 200;
+      top: 0;
+      right: 10rem;
+      bottom: 0;
+      margin: auto;
+      background-image: url("../img/mg-04.png");
+      background-position: center;
+      background-size: cover;
+      width: 30rem;
+      height: 60rem; }
+    .city__section__bg__car {
+      position: absolute;
+      top: 1rem;
+      right: 4rem;
+      bottom: 0;
+      height: 2rem;
+      object-fit: cover;
+      transform: rotate(180deg); }
 
 .intro {
   grid-row: 1 / 2;
