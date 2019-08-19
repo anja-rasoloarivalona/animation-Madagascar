@@ -3,21 +3,13 @@
     grid-column: 1 / -1;
     height: 100vh;
     width: 100vw; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 
+    display: none;
      
     &__imgContainer {
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;  
         z-index: -1;
         overflow: hidden;
     }
@@ -26,12 +18,6 @@
         width: 100%;
         height: 100%; 
         object-fit: cover;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto; 
         
         &--2 {
             opacity: 0;
@@ -43,9 +29,6 @@
        height: 30rem;
        position: relative;
        background: transparent;
-       display: flex;
-       align-items: center;
-       justify-content: center;
   
    
         &__layer {

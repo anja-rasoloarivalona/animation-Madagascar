@@ -1,6 +1,17 @@
-$colorPrimary: yellow;
+/*------VARIABLES---------*/
 
+    /*-----color------*/
+$colorPrimary: yellow;
 $colorWhite: #fff;
+$colorDark: #141313;
+$colorDarkTransparent: #141313c4;
+
+
+   /*-----gutter-----*/
+$xs : 1rem;
+$sm: 2rem;
+$md: 4rem;
+$xl: 6rem;
 
 
 *,
@@ -15,7 +26,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; 
     overflow-x: hidden;
-  //  overflow-y: hidden;
+  // overflow-y: hidden;
 
     @media screen and (max-width: 500px) {
         font-size: 50%; 
@@ -23,7 +34,6 @@ html {
 }
 
 body {
-    /*background: $colorPrimary;*/
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -36,84 +46,25 @@ body {
     grid-auto-rows: max-content;  
 }
 
-.loader {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-    url('../img/mada.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-    transform: translateY(-100vh);
-
-
-    &__subtitle {
-        font-size: 3rem;
-        color: white;
-        opacity: 0;
-        transform: translateY(10rem);
-    }
-
-    &__title {
-        width: 60rem;
-        height: 10rem;
-        margin-bottom: 2rem;
-        opacity: 1;
-    }
-
-    &__title path{
-        stroke-dasharray: 600;
-        animation: animate1 3s cubic-bezier(0, 0.23, 1, .1);
-
-       
-    }
-
-    &__cta {
-        opacity: 0;
-       
-    }
-}
-
-
-@keyframes animate1 {
-    0% {
-        opacity: 0;
-        fill: none;
-        stroke-dashoffset: 600;
-    }
-
-    30% {
-        opacity: 10;
-        stroke-dashoffset: 600;
-    }
-
-    90% {
-        fill: rgba( 255, 255, 255, 0);
-    }
-
-    100% {
-        opacity: 10;
-        fill: rgba(255, 255, 255, 1);
-        stroke-dashoffset: 0;
-    }
-
-}
-
 
 
 /*----------utilities-----------*/
 
+    /*----TITLE-----------*/
 
+.title--primary {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+    /*------FONT---------*/
 .white {
     color: white
 }
+
+
+
+   /*-------DISPLAY------*/
 
 .flex-centered {
     display: flex;
@@ -121,10 +72,25 @@ body {
     justify-content: center;
 }
 
-.title--primary {
-    font-size: 3rem;
-    text-transform: uppercase;
+.flex-centered-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.abs-centered {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+
+
 
 
 
@@ -134,12 +100,9 @@ body {
 
 
 ::-webkit-scrollbar {
-    width: 1rem;
-   
+    width: 1rem;   
 }
   
-
-   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(115, 116, 115); 
@@ -150,6 +113,5 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
-
-  }
+}
 

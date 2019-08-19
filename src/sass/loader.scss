@@ -1,0 +1,63 @@
+.loader {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+                      url('../img/mada.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-100vh);
+
+
+    &__subtitle {
+        font-size: 3rem;
+        color: white;
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    &__title {
+        width: 60rem;
+        height: 10rem;
+        margin-bottom: $sm;
+        opacity: 1;
+    }
+
+    &__title path{
+        stroke-dasharray: 600;
+        animation: animate1 3s cubic-bezier(0, 0.23, 1, .1);      
+    }
+
+    &__cta {
+        opacity: 0;
+       
+    }
+}
+
+
+@keyframes animate1 {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 600;
+    }
+
+    30% {
+        opacity: 10;
+        stroke-dashoffset: 600;
+    }
+
+    90% {
+        fill: rgba( 255, 255, 255, 0);
+    }
+
+    100% {
+        opacity: 10;
+        fill: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 0;
+    }
+
+}
