@@ -48,11 +48,41 @@ cities.forEach( function(city){
 })
 
 $('.btn--test').click(function(){
-        console.log('clicked')
-        window.scroll(0, 0);
-        $('.city').css('grid-row', '1 / 2')
-        $('.intro').css('display', 'none')
+        transition.play()
+        
+
+        var introMove = new TimelineMax()
+                introMove
+                .to('.intro', .1, {opacity: 0}, '+=1') 
+                .to('.city', .1, {y: '-100%'},'-=.5')
+               
+
+        setTimeout( function(){
+            window.scroll(0, 0);
+        }, 1500)
+     
+
+
+      //  $('.city').css('grid-row', '1 / 2')
+     //   $('.intro').css('display', 'none')
+
+      
+
+    
 })
+
+var transition = new TimelineMax()
+transition
+   .to('.transition', .1, {display: 'block'})
+   .to('.transition__inner', .5, {y: 0})
+  
+   .to('.transition__inner', 1.5, {y: '-100%'}, '+=.5')
+
+
+   transition.pause()
+
+
+     
 
 
 /*$('.city__resume__text__list--toamasina').mouseenter(function(){
