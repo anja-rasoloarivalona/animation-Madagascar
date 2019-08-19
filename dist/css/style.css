@@ -76,18 +76,47 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; }
 
-.city__section__tulear {
-  grid-row: 1 / 2;
-  grid-column: 1 / -1;
+.city__section {
   width: 100vw;
-  height: 100vh;
-  background: salmon;
-  transform: translateY(-150vh); }
-
-.city__section__bg {
-  width: 100vw;
-  height: 100vh;
-  position: relative; }
+  height: auto; }
+  .city__section__bg {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center left, rgba(212, 114, 114, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(22, 22, 22, 0.904) 75%, #000000 100%);
+    position: relative; }
+    .city__section__bg__right {
+      height: 100%;
+      background: #000C15;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .city__section__bg img {
+      width: 100%;
+      height: 100%;
+      z-index: -1; }
+  .city__section__tamatave {
+    width: 100vw;
+    height: 100vh;
+    background: black; }
+  .city__section__fianara {
+    width: 100vw;
+    height: 100vh;
+    background: yellowgreen; }
+  .city__section__tulear {
+    width: 100vw;
+    height: 100vh;
+    background: black; }
+  .city__section__tana {
+    width: 100vw;
+    height: 100vh;
+    background: yellowgreen; }
+  .city__section__majunga {
+    width: 100vw;
+    height: 100vh;
+    background: black; }
+  .city__section__diego {
+    width: 100vw;
+    height: 100vh; }
   .city__section__bg__map {
     position: fixed;
     z-index: 200;
@@ -103,11 +132,70 @@ body {
   .city__section__bg__car {
     position: absolute;
     top: 1rem;
-    right: 4rem;
+    right: 5.5rem;
     bottom: 0;
-    height: 2rem;
+    height: 2.5rem;
     object-fit: cover;
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    transition: all .3s linear; }
+  .city__section__bg__dest {
+    height: 3rem; }
+    .city__section__bg__dest--majunga {
+      top: 16.5rem;
+      left: 13rem;
+      position: absolute; }
+      .city__section__bg__dest--majunga__label {
+        opacity: 0;
+        transform: translate(-8rem, -4rem); }
+      .city__section__bg__dest--majunga__point {
+        opacity: 0; }
+    .city__section__bg__dest--diego {
+      top: 1rem;
+      right: 5rem;
+      position: absolute; }
+      .city__section__bg__dest--diego__label {
+        transform: translate(-1rem, -2rem); }
+      .city__section__bg__dest--diego__point {
+        position: absolute;
+        bottom: 0;
+        right: .5rem; }
+    .city__section__bg__dest--tana {
+      position: absolute;
+      top: 3rem;
+      bottom: 0rem;
+      right: 7rem;
+      margin: auto; }
+      .city__section__bg__dest--tana__label {
+        transform: translate(-7.8rem, 0.5rem); }
+    .city__section__bg__dest--tamatave {
+      position: absolute;
+      top: 26rem;
+      right: -2rem; }
+      .city__section__bg__dest--tamatave__label {
+        transform: translate(1.5rem, 0rem); }
+    .city__section__bg__dest--fianara {
+      position: absolute;
+      bottom: 17rem;
+      right: 8rem; }
+      .city__section__bg__dest--fianara__label {
+        transform: translate(1rem, 1rem); }
+    .city__section__bg__dest--tulear {
+      position: absolute;
+      bottom: 7.5rem;
+      left: 2.7rem; }
+      .city__section__bg__dest--tulear__label {
+        transform: translate(1rem, 1rem); }
+  .city__section__bg__label {
+    width: 8rem;
+    background: #fff;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    border: 1px solid black; }
+  .city__section__bg__point {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: green; }
 
 .city {
   grid-row: 2 / 3;
@@ -115,7 +203,10 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  transition: all .3s ease-in; }
+  transition: all .3s ease-in;
+  transform: translateY(-100vh);
+  height: auto;
+  min-height: 100vh; }
   .city__imgContainer, .city__resume {
     height: 100%;
     display: none !important; }

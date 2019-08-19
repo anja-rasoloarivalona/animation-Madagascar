@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+       
+
+
+
+
+
+
 var loader = new TimelineMax()
     loader
         .set('.loader__cta', {y: 20})
@@ -123,5 +130,11 @@ var introText = new TimelineMax()
         .to('.intro__text__line__inner', 2.5, {width: '100%'}, '+=.5')
         .to('.intro__text__layer', 1, {opacity: 1}, '-=.5')
         .to('.intro__text__para', .5, {opacity: 1, y: 0}, '-=.5')
+
+
+
+
+
+
 
 })

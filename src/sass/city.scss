@@ -6,11 +6,18 @@
     position: relative;
     transition: all .3s ease-in;
 
+   transform: translateY(-100vh);
+
+    height: auto;
+    min-height: 100vh;
+   
+    
+
 
     &__imgContainer, &__resume {      
         height: 100%;
 
-        
+
        display: none !important;
     }
 
@@ -29,6 +36,7 @@
 
         &--tana {
             z-index: 1;
+           
         }
 
         &--toliary {
@@ -71,6 +79,7 @@
 }
 
 .test{
+ 
     grid-row: 3 / 4;
     grid-column: 1 / -1;
     height: 100vh;

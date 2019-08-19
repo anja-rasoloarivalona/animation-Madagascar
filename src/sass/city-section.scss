@@ -1,24 +1,76 @@
 .city__section {
-
+    
   //  display: none;
    // background: white;
+   width: 100vw;
+   height: auto;
+
+&__bg {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center left, rgba(212, 114, 114, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(22, 22, 22, 0.904) 75%, #000000 100%);
+    position: relative;
+   
+    &__right {
+       // width: 20%;
+        height: 100%;
+        background: #000C15;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 
 
-    &__tulear {
-        grid-row: 1 / 2;
-        grid-column: 1 / -1;
+    & img {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      
+    }
+}
+
+&__tamatave {
+    width: 100vw;
+    height: 100vh;
+  background: black;
+}
+
+&__fianara {
+    width: 100vw;
+    height: 100vh;
+    background: yellowgreen;
+}
+
+&__tulear {
+    width: 100vw;
+    height: 100vh;
+  background: black; 
+}
+
+   &__tana {
+    width: 100vw;
+    height: 100vh;
+    background: yellowgreen;
+}
+    &__majunga {
         width: 100vw;
         height: 100vh;
-        background: salmon;
+      background: black;
+     
+    }
 
-        transform: translateY(-150vh);
+    &__diego {
+        width: 100vw;
+        height: 100vh;
+       
+  
+  //    background: $colorDark;
+      
       
     }
 
     &__bg {
-        width: 100vw;
-        height: 100vh;
-        position: relative;
+     
        
 
       
@@ -40,11 +92,108 @@
         &__car {
             position: absolute;
             top: 1rem;
-            right: 4rem;
+            right: 5.5rem;
             bottom: 0;
-            height: 2rem;
+            height: 2.5rem;
             object-fit: cover;
             transform: rotate(180deg);
+            transition: all .3s linear;
+        }
+
+        &__dest {
+            
+            height: 3rem;
+           
+            &--majunga {          
+                top: 16.5rem;
+                left: 13rem;
+                position: absolute;
+
+                &__label {
+                    opacity: 0;
+                    transform: translate(-8rem, -4rem)
+                }
+
+                &__point {
+                    opacity: 0;
+                }
+            }
+
+            &--diego {
+                top: 1rem;
+                right: 5rem;
+                position: absolute;
+
+                &__label {
+                    transform: translate(-1rem, -2rem)
+                }
+
+                &__point {
+                    position: absolute;
+                    bottom: 0;
+                    right: .5rem;
+                }
+            }
+
+            &--tana {
+              
+                position: absolute;
+                top: 3rem;
+                bottom: 0rem;
+                right: 7rem;
+                margin: auto;
+
+                &__label {
+                    transform: translate(-7.8rem, .5rem)
+                }
+
+        
+            }
+
+            &--tamatave {
+                position: absolute;
+                top: 26rem;
+                right: -2rem;
+                &__label {
+                    transform: translate(1.5rem, 0rem)
+                }
+            }
+
+            &--fianara {
+                position: absolute;
+                bottom: 17rem;
+                right: 8rem;
+
+                &__label {
+                    transform: translate(1rem, 1rem)
+                }
+            }
+
+            &--tulear {
+                position: absolute;
+                bottom: 7.5rem;
+                left: 2.7rem;
+
+                &__label {
+                    transform: translate(1rem, 1rem)
+                }
+            }
+        }
+
+        &__label {
+            width: 8rem;
+            background: $colorWhite;
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+            border: 1px solid black;
+        }
+
+
+        &__point {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: green;          
         }
     }
     
