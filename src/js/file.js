@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-       
-
-
-
-
-
 
 var loader = new TimelineMax()
     loader

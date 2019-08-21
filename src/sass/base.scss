@@ -39,6 +39,7 @@ html {
 body {
     line-height: 1.6;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -49,6 +50,8 @@ body {
     grid-template-columns: 1fr 90vw 1fr;
     grid-template-rows: max-content;
     grid-auto-rows: max-content;  
+
+ 
 }
 
 

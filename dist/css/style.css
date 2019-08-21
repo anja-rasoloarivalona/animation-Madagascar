@@ -24,7 +24,8 @@ html {
 
 body {
   line-height: 1.6;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif; }
 
 .container {
   position: relative;
@@ -78,45 +79,59 @@ body {
 
 .city__section {
   width: 100vw;
-  height: auto; }
+  height: auto;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #141313;
+  position: relative;
+  z-index: -1;
+  /*-------------CITY ITEM------------*/
+  /*----CITY TEXT DETAILS-------------*/
+  /*----CITY BACKGROUND IMAGE--------*/
+  /*-------MADAGASCAR MAP ANIMATED WITH THE CAR MOVING*/ }
+  .city__section__dest {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: relative;
+    scroll-snap-align: start; }
+    .city__section__dest__title {
+      font-size: 5rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom, #0c0c0c 0%, rgba(12, 12, 12, 0.7) 30%, rgba(12, 12, 12, 0.5) 50%, rgba(12, 12, 12, 0.3) 84%, rgba(12, 12, 12, 0.2) 100%);
+      padding: 1rem;
+      color: #fff;
+      width: 100%;
+      letter-spacing: 2px;
+      padding-left: 8rem;
+      z-index: 2000; }
+  .city__section__text {
+    width: 50%;
+    background: rgba(2, 2, 2, 0.826);
+    color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 22rem;
+    left: 8rem;
+    padding: 2rem 3rem; }
+    .city__section__text p {
+      font-size: 1.5rem; }
   .city__section__bg {
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center left, rgba(212, 114, 114, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(22, 22, 22, 0.904) 75%, #000000 100%);
     position: relative; }
-    .city__section__bg__right {
-      height: 100%;
-      background: #000C15;
-      position: absolute;
-      right: 0;
-      top: 0; }
     .city__section__bg img {
       width: 100%;
       height: 100%;
-      z-index: -1; }
-  .city__section__tamatave {
-    width: 100vw;
-    height: 100vh;
-    background: black; }
-  .city__section__fianara {
-    width: 100vw;
-    height: 100vh;
-    background: yellowgreen; }
-  .city__section__tulear {
-    width: 100vw;
-    height: 100vh;
-    background: black; }
-  .city__section__tana {
-    width: 100vw;
-    height: 100vh;
-    background: yellowgreen; }
-  .city__section__majunga {
-    width: 100vw;
-    height: 100vh;
-    background: black; }
-  .city__section__diego {
-    width: 100vw;
-    height: 100vh; }
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0; }
+  .city__section__diego__bg img {
+    opacity: 1; }
   .city__section__bg__map {
     position: fixed;
     z-index: 200;
@@ -131,13 +146,24 @@ body {
     height: 60rem; }
   .city__section__bg__car {
     position: absolute;
-    top: 1rem;
-    right: 5.5rem;
-    bottom: 0;
     height: 2.5rem;
     object-fit: cover;
-    transform: rotate(180deg);
-    transition: all .3s linear; }
+    transition: all .3s linear;
+    opacity: 0;
+    display: none; }
+    .city__section__bg__car--diego {
+      top: 3.6rem;
+      right: .5rem;
+      transform: rotate(180deg); }
+    .city__section__bg__car--majunga {
+      top: 1.2rem;
+      transform: rotate(180deg); }
+    .city__section__bg__car--tana {
+      transform: rotate(60deg) translate(-0.6rem, -1.7rem); }
+    .city__section__bg__car--tamatave {
+      transform: rotate(-140deg) translate(-1.2rem, -0.8rem); }
+    .city__section__bg__car--fianara {
+      transform: rotate(-140deg) translate(0.5rem, -1.5rem); }
   .city__section__bg__dest {
     height: 3rem; }
     .city__section__bg__dest--majunga {
@@ -145,10 +171,7 @@ body {
       left: 13rem;
       position: absolute; }
       .city__section__bg__dest--majunga__label {
-        opacity: 0;
-        transform: translate(-8rem, -4rem); }
-      .city__section__bg__dest--majunga__point {
-        opacity: 0; }
+        transform: translate(-8rem, -5rem); }
     .city__section__bg__dest--diego {
       top: 1rem;
       right: 5rem;
@@ -157,8 +180,8 @@ body {
         transform: translate(-1rem, -2rem); }
       .city__section__bg__dest--diego__point {
         position: absolute;
-        bottom: 0;
-        right: .5rem; }
+        bottom: -3rem;
+        right: -8.3rem; }
     .city__section__bg__dest--tana {
       position: absolute;
       top: 3rem;
@@ -173,6 +196,8 @@ body {
       right: -2rem; }
       .city__section__bg__dest--tamatave__label {
         transform: translate(1.5rem, 0rem); }
+      .city__section__bg__dest--tamatave__point {
+        transform: translate(2rem, 0); }
     .city__section__bg__dest--fianara {
       position: absolute;
       bottom: 17rem;
@@ -186,16 +211,45 @@ body {
       .city__section__bg__dest--tulear__label {
         transform: translate(1rem, 1rem); }
   .city__section__bg__label {
-    width: 8rem;
+    width: 10rem;
     background: #fff;
     padding: .5rem 1rem;
     font-size: 1.2rem;
-    border: 1px solid black; }
+    border: 1px solid black;
+    text-align: center;
+    opacity: 0; }
   .city__section__bg__point {
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
-    background: green; }
+    background: #014277;
+    border: 1px solid #fff;
+    position: relative; }
+    .city__section__bg__point__active {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 50%;
+      animation: blinker 1s linear infinite;
+      opacity: 0;
+      border: none;
+      display: none; }
+
+@keyframes blinker {
+  50% {
+    opacity: 0; }
+  100% {
+    transform: scale(2.5);
+    background: white; } }
+
+.city__section__bg__dest--diego__point__active {
+  opacity: 1;
+  display: block; }
+
+.city__section__bg__car--diego {
+  display: block;
+  opacity: 1; }
 
 .city {
   grid-row: 2 / 3;

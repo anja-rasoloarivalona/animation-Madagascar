@@ -16,6 +16,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap" rel="stylesheet">
     <title>My App</title>
 </head>
 <body class="container">
@@ -125,7 +126,7 @@
                                 Welcome to Madagascar
                         </h1>
                         <ul class="nav__menu__list white">
-                            <li class="nav__menu__list__item">Cities</li>
+                            <li class="nav__menu__list__item">Road Trip</li>
                             <li class="nav__menu__list__item">Economy</li>
                             <li class="nav__menu__list__item">Animals</li>
                             <li class="nav__menu__list__item">Culture</li>
@@ -173,31 +174,53 @@
     </section>
 
     <div class="city__section__bg__map">
-            <img src="./img/car.png" alt="car" class="city__section__bg__car" id="car" />
+
+
+            
 
             <div class="city__section__bg__dest city__section__bg__dest--majunga">
-                <div class="city__section__bg__point city__section__bg__dest--majunga__point"></div>
+                <img src="./img/car.png" alt="car" class="city__section__bg__car city__section__bg__car--majunga"/>
+                <div class="city__section__bg__point city__section__bg__dest--majunga__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--majunga__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--majunga__label">Majunga</div>
             </div>
 
             <div class="city__section__bg__dest city__section__bg__dest--diego">
-                <div class="city__section__bg__point city__section__bg__dest--diego__point"></div>
+                    <img src="./img/car.png" alt="car" class="city__section__bg__car city__section__bg__car--diego"/>
+                <div class="city__section__bg__point city__section__bg__dest--diego__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--diego__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--diego__label">Antsiranana</div>
             </div>
+
             <div class="city__section__bg__dest city__section__bg__dest--tana">
-                <div class="city__section__bg__point city__section__bg__dest--tana__point"></div>
+                    <img src="./img/car.png" alt="car" class="city__section__bg__car city__section__bg__car--tana"/>
+                <div class="city__section__bg__point city__section__bg__dest--tana__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--tana__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--tana__label">Antananarivo</div>
             </div>
+
             <div class="city__section__bg__dest city__section__bg__dest--tamatave">
-                <div class="city__section__bg__point city__section__bg__dest--tamatave__point"></div>
+                    <img src="./img/car.png" alt="car" class="city__section__bg__car city__section__bg__car--tamatave"/>
+                <div class="city__section__bg__point city__section__bg__dest--tamatave__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--tamatave__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--tamatave__label">Toamasina</div>
             </div>
+
             <div class="city__section__bg__dest city__section__bg__dest--fianara">
-                <div class="city__section__bg__point city__section__bg__dest--fianara__point"></div>
+                <img src="./img/car.png" alt="car" class="city__section__bg__car city__section__bg__car--fianara"/>
+                <div class="city__section__bg__point city__section__bg__dest--fianara__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--fianara__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--fianara__label">Fianarantsoa</div>
             </div>
             <div class="city__section__bg__dest city__section__bg__dest--tulear">
-                <div class="city__section__bg__point city__section__bg__dest--tulear__point"></div>
+                <div class="city__section__bg__point city__section__bg__dest--tulear__point">
+                    <div class="city__section__bg__point__active city__section__bg__dest--tulear__point__active"></div>
+                </div>
                 <div class="city__section__bg__label city__section__bg__dest--tulear__label">Tulear</div>
             </div>
             
@@ -243,19 +266,49 @@
 
             <section class="city__section">
                     
-               <div class="city__section__diego">
-                   <div class="city__section__bg">
+               <div class="city__section__diego city__section__dest">
+                   <div class="city__section__bg city__section__diego__bg">
                         <img class="abs-centered" src="./img/diego.jpg" alt="img">
                    </div>
-                   <div class="city__section__bg__right">
+                   <h1 class="city__section__dest__title">Antsiranana</h1>
 
+                   <div class="city__section__text">       
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium quidem eaque sed pariatur laborum dolorum ducimus corrupti quos quibusdam, quis earum facere rem saepe aliquam possimus facilis tempora eum ipsum amet exercitationem recusandae culpa asperiores consectetur. Facere, eaque placeat. Porro hic dolorum deleniti dicta laboriosam accusantium, ipsa id consequatur fugiat.
+                        </p>
                    </div>
+       
                </div>
-               <div class="city__section__majunga"></div>  
-               <div class="city__section__tana"></div>   
-               <div class="city__section__tamatave"></div>  
-               <div class="city__section__fianara"></div>    
-               <div class="city__section__tulear"></div>   
+               <div class="city__section__majunga city__section__dest">
+                    <h1 class="city__section__dest__title city__section__dest__title--majunga">Mahajanga</h1>
+                   <div class="city__section__bg city__section__majunga__bg">
+                        <img class="abs-centered" src="./img/majunga.jpg" alt="img">
+                   </div>
+          
+               </div>  
+               <div class="city__section__tana city__section__dest">
+                    <h1 class="city__section__dest__title city__section__dest__title--tana">Antananarivo</h1>
+                   <div class="city__section__bg city__section__tana__bg">
+                        <img class="abs-centered" src="./img/tana.jpg" alt="img">
+                   </div>
+               </div>   
+               <div class="city__section__tamatave city__section__dest">
+                    <h1 class="city__section__dest__title city__section__dest__title--tamatave">Toamasina</h1>
+                   <div class="city__section__bg city__section__tamatave__bg">
+                        <img class="abs-centered" src="./img/toamasina.jpeg" alt="img">
+                   </div>
+               </div>  
+               <div class="city__section__fianara city__section__dest">
+                    <h1 class="city__section__dest__title city__section__dest__title--fianara">Fianarantsoa</h1>
+                    <div class="city__section__bg city__section__fianara__bg">
+                            <img class="abs-centered" src="./img/fianara.jpg" alt="img">
+                    </div>
+               </div>    
+               <div class="city__section__tulear city__section__dest">
+                    <h1 class="city__section__dest__title city__section__dest__title--tulear">Toliary</h1>
+                    <div class="city__section__bg city__section__tulear__bg">
+                            <img class="abs-centered" src="./img/toliary.jpg" alt="img">
+                    </div>
+               </div>   
         
             </section>
 

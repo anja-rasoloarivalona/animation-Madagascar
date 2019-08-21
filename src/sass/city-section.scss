@@ -5,81 +5,104 @@
    width: 100vw;
    height: auto;
 
-&__bg {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at center left, rgba(212, 114, 114, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(22, 22, 22, 0.904) 75%, #000000 100%);
-    position: relative;
+   scroll-snap-type: y proximity;
+   overflow-y: scroll;
+    overflow-x: hidden;
+   background: $colorDark;
+   position: relative;
+   z-index: -1;
+
+    /*-------------CITY ITEM------------*/
+    
+    &__dest {
+        width: 100vw;
+        height: 100vh;
+        z-index: -1; 
+        position: relative;
+        scroll-snap-align: start;  
+
+    
+
+    
+        &__title {
+            font-size: 5rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, 
+                rgb(12, 12, 12) 0%,
+                rgba(12, 12, 12, 0.7) 30%, 
+                rgba(12, 12, 12, 0.5 ) 50%, 
+                rgba(12, 12, 12, 0.3) 84%, 
+                rgba(12, 12, 12, 0.2) 100%);
+
+
+            padding: 1rem;
+            color: $colorWhite;
+            width: 100%;
+            letter-spacing: 2px;
+            padding-left: 8rem;
+            z-index: 2000;
+        }
+    }
+
    
-    &__right {
-       // width: 20%;
-        height: 100%;
-        background: #000C15;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-
-    & img {
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      
-    }
-}
-
-&__tamatave {
-    width: 100vw;
-    height: 100vh;
-  background: black;
-}
-
-&__fianara {
-    width: 100vw;
-    height: 100vh;
-    background: yellowgreen;
-}
-
-&__tulear {
-    width: 100vw;
-    height: 100vh;
-  background: black; 
-}
-
-   &__tana {
-    width: 100vw;
-    height: 100vh;
-    background: yellowgreen;
-}
-    &__majunga {
-        width: 100vw;
-        height: 100vh;
-      background: black;
-     
-    }
-
-    &__diego {
-        width: 100vw;
-        height: 100vh;
-       
   
-  //    background: $colorDark;
-      
-      
+
+    
+
+    /*----CITY TEXT DETAILS-------------*/
+    &__text {
+    width: 50%;
+    background: rgba(2, 2, 2, 0.826);
+    color: $colorWhite;
+    border-radius: 3px;
+    position: absolute;
+    top: 22rem;
+    left: 8rem;
+    padding: 2rem 3rem;
+
+    
+   
+
+
+        & p {
+            font-size: 1.5rem;
+        }
     }
+
+    /*----CITY BACKGROUND IMAGE--------*/
 
     &__bg {
-     
+        width: 100%;
+        height: 100%;
+        position: relative;
        
 
-      
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
 
+            opacity: 0;
+        
+        }
+    }
+
+    &__diego__bg img {
+        opacity: 1;
+    }
+
+    /*-------MADAGASCAR MAP ANIMATED WITH THE CAR MOVING*/
+
+    &__bg {
         &__map { 
            position: fixed;    
            z-index: 200; 
-            top: 0;
-          right: 10rem;
+           top: 0;
+           right: 10rem;
            bottom: 0;
            margin: auto;
            background-image: url('../img/mg-04.png');
@@ -90,14 +113,41 @@
         }
 
         &__car {
-            position: absolute;
-            top: 1rem;
-            right: 5.5rem;
-            bottom: 0;
+            position: absolute;          
             height: 2.5rem;
-            object-fit: cover;
-            transform: rotate(180deg);
+            object-fit: cover;       
             transition: all .3s linear;
+
+
+            opacity: 0;
+            display: none;
+
+
+            &--diego {
+                top: 3.6rem;
+                right: .5rem;
+                transform: rotate(180deg);    
+            }
+
+            &--majunga {
+                top: 1.2rem;
+                transform: rotate(180deg); 
+               
+            }
+
+            &--tana {
+                
+                transform: rotate(60deg) translate(-.6rem, -1.7rem);
+            }
+
+            &--tamatave {
+                
+                transform: rotate(-140deg) translate(-1.2rem, -.8rem);
+            }
+
+            &--fianara {
+                transform: rotate(-140deg) translate(.5rem, -1.5rem);
+            }
         }
 
         &__dest {
@@ -110,12 +160,12 @@
                 position: absolute;
 
                 &__label {
-                    opacity: 0;
-                    transform: translate(-8rem, -4rem)
+                  //  opacity: 0;
+                    transform: translate(-8rem, -5rem)
                 }
 
                 &__point {
-                    opacity: 0;
+                  //  opacity: 0;
                 }
             }
 
@@ -130,13 +180,15 @@
 
                 &__point {
                     position: absolute;
-                    bottom: 0;
-                    right: .5rem;
+                    bottom: -3rem;
+                    right: -8.3rem;
+
+                 //   background: yellowgreen !important;
+                 //   animation: blinker 1s linear infinite;
                 }
             }
 
-            &--tana {
-              
+            &--tana {          
                 position: absolute;
                 top: 3rem;
                 bottom: 0rem;
@@ -147,7 +199,7 @@
                     transform: translate(-7.8rem, .5rem)
                 }
 
-        
+      
             }
 
             &--tamatave {
@@ -157,13 +209,15 @@
                 &__label {
                     transform: translate(1.5rem, 0rem)
                 }
+                &__point {
+                    transform: translate(2rem, 0);
+                }
             }
 
             &--fianara {
                 position: absolute;
                 bottom: 17rem;
                 right: 8rem;
-
                 &__label {
                     transform: translate(1rem, 1rem)
                 }
@@ -173,7 +227,6 @@
                 position: absolute;
                 bottom: 7.5rem;
                 left: 2.7rem;
-
                 &__label {
                     transform: translate(1rem, 1rem)
                 }
@@ -181,20 +234,67 @@
         }
 
         &__label {
-            width: 8rem;
+            width: 10rem;
             background: $colorWhite;
             padding: .5rem 1rem;
             font-size: 1.2rem;
             border: 1px solid black;
+            text-align: center;
+
+
+            opacity: 0;
         }
 
 
         &__point {
-            width: 1rem;
-            height: 1rem;
+            width: 1.2rem;
+            height: 1.2rem;
             border-radius: 50%;
-            background: green;          
+            background: rgb(1, 66, 119);    
+            border: 1px solid $colorWhite;
+            position: relative;
+  
+
+            &__active {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: white;
+                border-radius: 50%;
+                animation: blinker 1s linear infinite;
+                opacity: 0;
+                border: none;
+
+                display: none;
+             
+            }
+            
         }
     }
     
+}
+
+
+@keyframes blinker {
+    50% {
+      opacity: 0;  
+    }
+
+    100% {
+        transform: scale(2.5);
+        background: white;
+    }
+    
+  }
+
+
+.city__section__bg__dest--diego__point__active {
+      opacity: 1;
+      display: block;
+
+}
+
+.city__section__bg__car--diego {
+    display: block;
+    opacity: 1;
 }
