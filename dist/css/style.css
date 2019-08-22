@@ -438,36 +438,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden; }
-    .intro__imgContainer__layer {
-      width: 50vw;
-      height: 8rem;
-      background: transparent;
-      position: fixed;
-      top: 0;
-      z-index: 190; }
-      .intro__imgContainer__layer img {
-        position: absolute;
-        left: 8rem;
-        height: 8rem;
-        width: 10rem;
-        object-fit: cover;
-        display: none; }
-      .intro__imgContainer__layer ul {
-        display: flex;
-        width: 100%;
-        max-width: 65rem;
-        justify-content: center;
-        color: white;
-        height: 100%;
-        font-size: 1.3rem;
-        list-style: none;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto; }
-        .intro__imgContainer__layer ul li {
-          margin: 0 3rem; }
   .intro__img {
     width: 100%;
     height: 100%;
@@ -476,59 +446,6 @@ body {
     background-size: "cover"; }
     .intro__img--2 {
       opacity: 0; }
-  .intro__text {
-    width: 50rem;
-    height: 30rem;
-    background: transparent;
-    z-index: 3;
-    top: 4rem !important;
-    position: relative;
-    display: none; }
-    .intro__text__layer {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(34, 33, 33, 0.774);
-      z-index: -1;
-      opacity: 0; }
-    .intro__text__line {
-      display: block;
-      height: 4px;
-      position: absolute;
-      background: transparent; }
-      .intro__text__line__inner {
-        position: absolute;
-        background: #bbbbbb;
-        height: 100%;
-        width: 0%; }
-      .intro__text__line--1 {
-        top: 0;
-        width: 110%; }
-      .intro__text__line--2 {
-        left: 0;
-        transform: translateY(calc(-35rem / 2)) rotate(90deg);
-        transform-origin: top left;
-        width: 35rem; }
-      .intro__text__line--3 {
-        bottom: 0;
-        width: 110%; }
-        .intro__text__line--3__inner {
-          right: 0; }
-      .intro__text__line--4 {
-        right: 0;
-        bottom: 0;
-        top: 0;
-        margin: auto;
-        transform: rotate(-90deg) translateX(50%);
-        transform-origin: bottom right;
-        width: 35rem; }
-    .intro__text__para {
-      width: 75%;
-      text-align: center;
-      font-size: 1.4rem;
-      opacity: 0;
-      transform: translateY(2rem);
-      color: white; }
 
 .sidenav {
   position: fixed;
