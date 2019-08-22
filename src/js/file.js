@@ -42,11 +42,11 @@ $('.navbar').click( function(){
         if(!open){
            $('html').css('overflow-y', 'hidden')
            $(this).addClass("open");
-           $('.nav').addClass("open");
+           $('.sidenav').addClass("open");
            return open = true
         } else {
           $('html').css('overflow-y', '')
-          $('.nav').removeClass("open");
+          $('.sidenav').removeClass("open");
           $(this).removeClass("open");
           return open = false
         }  

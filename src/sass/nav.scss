@@ -1,0 +1,29 @@
+.nav {
+  width: 50vw;
+  height: 8rem;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 190;
+  // box-shadow: 0px 1px 11px -1px rgba(0,0,0,0.75);
+
+  & ul {
+    display: flex;
+    width: 100%;
+    max-width: 65rem;
+    justify-content: center;
+    color: white;
+    height: 100%;
+    font-size: 1.3rem;
+    list-style: none;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    & li {
+      margin: 0 3rem;
+    }
+  }
+}

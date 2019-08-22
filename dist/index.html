@@ -22,6 +22,9 @@
 </head>
 <body class="container">
 
+
+    <!-----------START LOADER COMPONENT---------------->
+
     <section class="loader flex-centered-col">
             <div class="loader__subtitle">
                     Welcome to
@@ -106,42 +109,65 @@
                     Discover
             </button>
     </section>
-        
-    <div class="navbar">
-            <span class="navbar__toggle navbar__toggle--1"></span>
-            <span class="navbar__toggle navbar__toggle--2"></span>
-            <span class="navbar__toggle navbar__toggle--3"></span>
-    </div>
 
-    <div class="nav">
-            <div class="nav__left">
-                <figure>
-                    <img src="./img/maki.jpg" alt="maki" class="nav__left__img"/>
-                    <figcaption  class="nav__left__imgCaption white">The Catta Lemur or Maki catta is a lemuriform primate of the Lemuridae family. With its long tail ringed in white and black, it is the best known and most emblematic lemur.</figcaption>
-                </figure>
-                
-            </div>
-            <div class="nav__right flex-centered">
-                <div class="nav__menu">
-                        <h1 class="title--primary white">
-                                Welcome to Madagascar
-                        </h1>
-                        <ul class="nav__menu__list white">
-                            <li class="nav__menu__list__item">Road Trip</li>
-                            <li class="nav__menu__list__item">Economy</li>
-                            <li class="nav__menu__list__item">Animals</li>
-                            <li class="nav__menu__list__item">Culture</li>
-                            <li class="nav__menu__list__item">Best Places</li>
-                        </ul>
-                </div>
-            
-            </div>
+    <!------------END LOADER COMPONENT----------------->
 
-    </div>
 
+    <!------------START TRANSITION COMPONENT----------->
     <div class="transition">
-        <div class="transition__inner"></div>
+            <div class="transition__inner"></div>
     </div>
+    <!-----------END TRANSITION COMPONENT--------------->
+
+    <!-----------START NAVIGATION----------------------->
+        
+        <!--NAVBAR TOGGLE-->
+        <div class="navbar">
+                <span class="navbar__toggle navbar__toggle--1"></span>
+                <span class="navbar__toggle navbar__toggle--2"></span>
+                <span class="navbar__toggle navbar__toggle--3"></span>
+        </div>
+
+        <!---SIDEBAR NAVIGATION-->
+        <nav class="sidenav">
+                <div class="sidenav__left">
+                    <figure>
+                        <img src="./img/maki.jpg" alt="maki" class="sidenav__left__img"/>
+                        <figcaption  class="sidenav__left__imgCaption white">The Catta Lemur or Maki catta is a lemuriform primate of the Lemuridae family. With its long tail ringed in white and black, it is the best known and most emblematic lemur.</figcaption>
+                    </figure>
+                    
+                </div>
+                <div class="sidenav__right flex-centered">
+                    <div class="sidenav__menu">
+                            <h1 class="title--primary white">
+                                    Welcome to Madagascar
+                            </h1>
+                            <ul class="sidenav__menu__list white">
+                                <li class="sidenav__menu__list__item">Road Trip</li>
+                                <li class="sidenav__menu__list__item">Economy</li>
+                                <li class="sidenav__menu__list__item">Animals</li>
+                                <li class="sidenav__menu__list__item">Culture</li>
+                                <li class="sidenav__menu__list__item">Best Places</li>
+                            </ul>
+                    </div>
+                
+                </div>
+
+        </nav>
+
+        <!---NAVIGATION-->
+        <nav class="nav">
+            <ul>
+                <li>MadaTour</li>
+                <li>Road Trip</li>
+                <li>Plan</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+    <!----------END NAVIGATION---------------------------->
+
+
     
 
     <section class="intro flex-centered">
@@ -158,15 +184,7 @@
             </h1>
 
             <div class="intro__imgContainer abs-centered">
-                <div class="intro__imgContainer__layer">
-                    <img src="./img/logo.png" alt="logo">
-                    <ul>
-                        <li>MadaTour</li>
-                        <li>Road Trip</li>
-                        <li>Plan</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
+                
                <img src="./img/intro1.jpg" alt="intro1" class="intro__img intro__img--1 abs-centered">
                 <img src="./img/intro2.jpg" alt="intro2" class="intro__img intro__img--2 abs-centered">
 

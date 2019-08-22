@@ -1,0 +1,67 @@
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    overflow: hidden;
+
+    &__left, &__right {
+        width: 50%;
+        height: 100%;
+        transition: all .5s ease-in-out;
+    }
+
+    
+
+    &__left {
+        background: green;
+        transform: translateY(100%);
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__imgCaption {
+            position: absolute;
+            bottom: 10rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: rgba(29, 28, 28, 0.76);
+            border: 1px solid $colorWhite;
+            width: 70%;
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+            
+        }
+
+        & figure {
+            height: 100%;
+            position: relative;
+        }
+    }
+
+    &__right {
+        background: rgb(34, 31, 31);
+        transform: translateY(-100%);
+    }
+
+    &.open &__left, &.open &__right  {
+        transform: none;
+    }
+
+    &__menu {
+        width: 80%;
+        height: 60%;
+        
+        &__list {
+            list-style: none;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+    }
+}
