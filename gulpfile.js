@@ -94,6 +94,18 @@ exports.copyHtml = copyHtml;*/
 
 
 
+function svgHandler(){
+    return src('src/img/icon/sprite.svg')
+    .pipe(dest('dist/img/icon'))
+    .pipe(browserSync.stream())  
+    
+
+}
+
+exports.svg = svgHandler;
+
+
+
 
 
 

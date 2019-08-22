@@ -2,7 +2,7 @@ $(document).ready(function(){
 
         var t1 = new TimelineMax();
 
-        t1.set('.intro__title__letter', {y: -30, x: 0, scale: 3})
+        t1.set('.intro__title__letter', {y: -30, x: 0, scale: 3, marginLeft: -40})
      //   t1.set('.intro__title', {x: 280})
         t1.staggerTo('.intro__title__letter', 1 , {
                 opacity: 1,
@@ -10,6 +10,7 @@ $(document).ready(function(){
                 y: 0,
                 scale: 1,
                 rotation: 0,
+                marginLeft: 0,
                 ease:  Power2.easeOut
         }, .25, '+=1'); 
      //   t1.to('.intro__title', 2, {x: 0},'-=2.5')
