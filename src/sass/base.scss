@@ -109,6 +109,8 @@ body {
 
 ::-webkit-scrollbar {
     width: 1rem;   
+
+    display: none;
   
 }
   
@@ -122,5 +124,46 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
+}
+
+
+.testa {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    height: 100vh;
+
+    position: relative;
+
+    &__in {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50vw;
+        height: 10rem;
+        background: black;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+    
+}
+
+.testas {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+    height: 100vh;
+    position: relative;
+
+   
+
+    &__in {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 10rem;
+        background: black;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+    }
+    
 }
 

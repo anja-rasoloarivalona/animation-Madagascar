@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+        var t1 = new TimelineMax();
+
+        t1.set('.intro__title__letter', {y: -30, x: 0, scale: 3})
+     //   t1.set('.intro__title', {x: 280})
+        t1.staggerTo('.intro__title__letter', 1 , {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                scale: 1,
+                rotation: 0,
+                ease:  Power2.easeOut
+        }, .25, '+=1'); 
+     //   t1.to('.intro__title', 2, {x: 0},'-=2.5')
+
+
 
 var loader = new TimelineMax()
     loader
@@ -48,42 +63,9 @@ cities.forEach( function(city){
         })  
 })
 
-$('.btn--test').click(function(){
-        transition.play()
-        
-
-        var introMove = new TimelineMax()
-                introMove
-                .to('.intro', .1, {opacity: 0}, '+=1') 
-                .to('.city__imgContainer', .1, {display: 'none'}) 
-                .to('.city__resume', .1, {display: 'none'}) 
-              //  .to('.city', .1, {y: '-100%'},'-=.5')
-                .to('.city__section', .1, {display: 'block'},'-=.5')
-               
-
-        setTimeout( function(){
-            window.scroll({top: 0, left: 0, behavior: 'smooth'});
-        }, 1500)
-     
 
 
-      //  $('.city').css('grid-row', '1 / 2')
-     //   $('.intro').css('display', 'none')
 
-      
-
-    
-})
-
-var transition = new TimelineMax()
-transition
-   .to('.transition', .1, {display: 'block'})
-   .to('.transition__inner', .5, {y: 0})
-  
-   .to('.transition__inner', 1.5, {y: '-100%'}, '+=.5')
-
-
-   transition.pause()
 
 
      
@@ -124,6 +106,13 @@ var introText = new TimelineMax()
         .to('.intro__text__line__inner', 2.5, {width: '100%'}, '+=.5')
         .to('.intro__text__layer', 1, {opacity: 1}, '-=.5')
         .to('.intro__text__para', .5, {opacity: 1, y: 0}, '-=.5')
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 .city__section {
     
-  //  display: none;
+   display: none;
    // background: white;
    width: 100vw;
    height: auto;
@@ -91,14 +91,19 @@
         }
     }
 
+  
+
+
     &__diego__bg img {
-        opacity: 1;
+       opacity: 1;
     }
 
     /*-------MADAGASCAR MAP ANIMATED WITH THE CAR MOVING*/
 
     &__bg {
         &__map { 
+
+            display: none;
            position: fixed;    
            z-index: 200; 
            top: 0;
