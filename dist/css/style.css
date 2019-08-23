@@ -611,13 +611,14 @@ body {
   height: 8rem;
   position: fixed;
   top: 0;
-  z-index: 190;
+  z-index: 4190;
   transition: all .3s ease-in; }
   .nav__layer {
     background: gray;
     width: 100vw;
     height: 100%;
-    opacity: 0; }
+    opacity: 0;
+    z-index: 4000; }
   .nav__hide {
     transform: translateY(-8rem); }
   .nav ul {
@@ -633,7 +634,9 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-    margin: auto; }
+    margin: auto;
+    position: relative;
+    z-index: 100000; }
     .nav ul li {
       margin: 0 3rem; }
 
@@ -643,7 +646,8 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  z-index: 3000; }
+  z-index: 3000;
+  background: saddlebrown; }
   .offer__title {
     color: #EF6C57; }
   .offer__list {

@@ -102,7 +102,8 @@ var intro = new TimelineMax({repeat: -1})
 var introBgMove = new TimelineMax()
 
 introBgMove
-         .to('.intro__img', 1, {y: -100, ease:  Power2.easeOut}, '-=.5')
+         .to('.intro', 1, {y: -60, ease:  Power2.easeOut}, '-=.5')
+         .to('.offer', 1, {y: -60, ease:  Power2.easeOut}, '-=1')
 
 var controller = new ScrollMagic.Controller();
     
@@ -116,7 +117,7 @@ var intross = new ScrollMagic.Scene({
             .offset(-340)
             
             
-var width = $(window).width();
+
 var zero= 0;
 
 $(window).on("scroll", function() {
@@ -145,7 +146,7 @@ $(window).on("scroll", function() {
                   .setTween(navBgchange)
                   .addTo(controller)    
                   .offset(0)
-                  .addIndicators()
+              
 
 
 })
