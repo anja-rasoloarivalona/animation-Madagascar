@@ -15,7 +15,7 @@ $(document).ready(function(){
             transition.pause()
 
 
-      $('.btn--test').click(function(){
+      $('#roadtrip').click(function(){
         transition.play()  
         var introMove = new TimelineMax()
                 introMove        

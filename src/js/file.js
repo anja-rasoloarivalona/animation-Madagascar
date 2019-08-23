@@ -99,26 +99,53 @@ var intro = new TimelineMax({repeat: -1})
 
 
 
+var introBgMove = new TimelineMax()
 
-/*--------ANIMATE LINE OF INTRO TEXT----------------------*/
+introBgMove
+         .to('.intro__img', 1, {y: -100, ease:  Power2.easeOut}, '-=.5')
 
-var introText = new TimelineMax()
-    introText
-        .to('.intro__text__line__inner', 2.5, {width: '100%'}, '+=.5')
-        .to('.intro__text__layer', 1, {opacity: 1}, '-=.5')
-        .to('.intro__text__para', .5, {opacity: 1, y: 0}, '-=.5')
+var controller = new ScrollMagic.Controller();
+    
+var intross = new ScrollMagic.Scene({
+                triggerElement:'.offer',
+                trigerHook: 0,
+                duration: '100%'
+            })
+            .setTween(introBgMove)
+            .addTo(controller)    
+            .offset(-340)
+            
+            
+var width = $(window).width();
+var zero= 0;
+
+$(window).on("scroll", function() {
+
+        $(".nav").toggleClass("nav__hide", $(window).scrollTop() > zero);
+        zero = $(window).scrollTop();
+      });
 
 
 
 
 
 
+      var navBgchange = new TimelineMax()
 
-
-
-
-
-
+      navBgchange
+                .set('.nav__layer', {opacity:0})
+               .to('.nav__layer', .3, {opacity: 1})
+      
+      var controller = new ScrollMagic.Controller();
+          
+      var intros = new ScrollMagic.Scene({
+                      triggerElement:'.offer',
+                      trigerHook: 0,
+                  })
+                  .setTween(navBgchange)
+                  .addTo(controller)    
+                  .offset(0)
+                  .addIndicators()
 
 
 })

@@ -157,6 +157,7 @@
 
         <!---NAVIGATION-->
         <nav class="nav">
+            <div class="nav__layer abs-centered"></div>
             <ul>
                 <li>MadaTour</li>
                 <li>Road Trip</li>
@@ -185,8 +186,8 @@
 
             <!---DYNAMIC BAKCGROUND IMAGES-->
             <div class="intro__imgContainer abs-centered">             
-               <img src="./img/intro1.jpg" alt="intro1" class="intro__img intro__img--1 abs-centered">
-                <img src="./img/intro2.jpg" alt="intro2" class="intro__img intro__img--2 abs-centered">
+               <div class="intro__img intro__img--1 abs-centered"></div>
+                <div class="intro__img intro__img--2 abs-centered"></div>
             </div>   
     </section>
     <!-------END INTRODUCTION SECTION--------------------->
@@ -260,9 +261,100 @@
            
     </section>
 
-    <!------------END SERVICES SECTION----------------------->
+    <!------------END SERVICES SECTION--------------------->
 
 
+    <!------------START DESTINATION SECTION---------------->
+
+    <section class="offer flex-centered-col">
+            <h1 class="title--primary offer__title">Our offer</h1>
+            <p class="offer__subtitle">We Offer The Following Services</p>
+            <ul class="offer__list">
+                <li class="offer__list__item">
+                    <div class="offer__list__item__top">
+                        <div class="offer__list__item__top__imgLayer abs-centered"></div>
+                        <img src="img/honey.jpg" alt="" class="offer__list__item__top__img abs-centered"/>
+                        <svg class="abs-centered">
+                                <use xlink:href="img/icon/sprite.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                    <div class="offer__list__item__bot">
+                        <h1>Honey Moon</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus tempora recusandae eos, voluptate dolores.</p>
+                        <div class="offer__list__item__bot__details">
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-clock"></use>
+                                </svg>
+                                <div>10 days</div>
+                            </div>
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-pricetags"></use>
+                                </svg>
+                                <div>From 1200 CAD</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="offer__list__item" id="roadtrip">
+                    <div class="offer__list__item__top">
+                        <div class="offer__list__item__top__imgLayer abs-centered"></div>
+                        <img src="img/road.jpg" alt="" class="offer__list__item__top__img abs-centered"/>
+                        <svg class="abs-centered">
+                                <use xlink:href="img/icon/sprite.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                    <div class="offer__list__item__bot">
+                        <h1>Road Trip</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus tempora recusandae eos, voluptate dolores.</p>
+                        <div class="offer__list__item__bot__details">
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-clock"></use>
+                                </svg>
+                                <div>10 days</div>
+                            </div>
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-pricetags"></use>
+                                </svg>
+                                <div>From 1200 CAD</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="offer__list__item">
+                    <div class="offer__list__item__top">
+                        <div class="offer__list__item__top__imgLayer abs-centered"></div>
+                        <img src="img/custom.jpg" alt="" class="offer__list__item__top__img abs-centered"/>
+                        <svg class="abs-centered">
+                                <use xlink:href="img/icon/sprite.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                    <div class="offer__list__item__bot">
+                        <h1>Custom</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus tempora recusandae eos, voluptate dolores.</p>
+                        <div class="offer__list__item__bot__details">
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-clock"></use>
+                                </svg>
+                                <div>10 days</div>
+                            </div>
+                            <div class="offer__list__item__bot__details__container">
+                                <svg>
+                                    <use xlink:href="img/icon/sprite.svg#icon-pricetags"></use>
+                                </svg>
+                                <div>From 1200 CAD</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    </section>
+
+    <!-----------END DESTINATION SECTION------------------->
         <!--
                 <iframe  src="https://www.youtube.com/embed/qgxFh8sqBbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
                 <video controls>
@@ -326,40 +418,6 @@
     </div>
  
     <section class="city flex-centered">
-            <div class="city__imgContainer">
-                <img src="./img/tana.jpg" alt="" class="city__img city__img--tana abs-centered" />
-                <img src="./img/toliary.jpg" alt="" class="city__img city__img--tulear abs-centered" />
-                <img src="./img/toamasina.jpeg" alt="" class="city__img city__img--toamasina abs-centered" />
-                <img src="./img/majunga.jpg" alt="" class="city__img city__img--majunga abs-centered" />
-                <img src="./img/diego.jpg" alt="" class="city__img city__img--diego abs-centered" />
-                <img src="./img/fianara.jpg" alt="" class="city__img city__img--fianara abs-centered" />
-            </div>
-            <div class="city__resume flex-centered">
-                <div class="city__resume__text">
-                    <h1 class="title--primary">
-                        Cities
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, neque. Quasi atque natus odit praesentium deserunt dicta. Neque magnam distinctio illum iste fugiat? Quos, fugiat repellat. Voluptatibus veniam repellendus quam consectetur quisquam non voluptatem, atque placeat. Ducimus fugiat commodi hic eveniet distinctio, deserunt vel natus voluptatum eum. In, labore adipisci.
-                    </p>
-                    <ul class="city__resume__text__list">
-                        <li>Antananarivo</li>
-                        <li class="city__resume__text__list--tulear">Toliary</li>
-                        <li class="city__resume__text__list--toamasina">Toamasina</li>
-                        <li class="city__resume__text__list--majunga">Mahajanga</li>
-                        <li class="city__resume__text__list--diego">Antsiranana</li>
-                        <li class="city__resume__text__list--fianara">Fianarantsoa</li>
-                    </ul>
-                    <button class="btn btn--test">
-                        test
-                    </button>
-
-                    <div class="city__resume__bg abs-centered">
-                        <img src="./img/mg-04.png" alt="lol" class="city__resume__bg__map abs-centered">
-                    </div>
-                    
-                </div>
-            </div>
 
             <section class="city__section">
                     
@@ -412,6 +470,7 @@
 
 
     </section>
+    
     <div class="testas">
             <div class="testas__in"></div>
     </div>
