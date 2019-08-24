@@ -1,8 +1,11 @@
 .services {
-    grid-row: 5 / 6;
-    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
     width: 100%;
-    height: 100vh;
+    height: 30rem;
+    background: $colorPrimary;
+    padding: 1rem;
+
 
     @media screen and (max-width: 583px) {
         grid-column: 1 / -1;
@@ -17,17 +20,18 @@
         color: $colorPrimary;
     }
 
+
     &__list {
-        width: 80%;
-        max-width: 95rem;
-        margin-top: 4rem;
+        width: 90%;
+        max-width: 120rem;
         list-style: none;
         display: grid;
         grid-template-rows: repeat(auto-fit, 20rem);
-        grid-template-columns: repeat(auto-fit, 20rem);
+        grid-template-columns: repeat(auto-fit, 27rem);
         grid-auto-rows: 20rem;
-        grid-gap: 2rem;
         justify-content: center;
+       
+        
      
         @media screen and (max-width: 1200px) {
             grid-template-columns: repeat(2, 20rem);
@@ -41,12 +45,21 @@
             grid-template-columns: repeat(auto-fit, 20rem);
         }
 
-        &__item {
-            width: 20rem;
-            height: 20rem;
-          
-      
         
+
+        &__item {
+            width: 27rem;   
+           border-right: .5px solid rgb(172, 172, 172);
+         
+
+            &:first-child {
+                border-left: 1px solid rgb(172, 172, 172); 
+            }
+
+            &:last-child {
+                border-right: 1px solid rgb(172, 172, 172);
+            }
+
 
             &__top {
                 width: 12rem;
@@ -54,16 +67,17 @@
                 
                 position: relative;
                 border-radius: 50%;
-                background: $colorPrimary;
+                background: $colorWhite;
                 overflow: hidden;
-                transform: translateX(4rem);
+                transform: translateX(7.5rem);
+
 
                 & svg {
                     width: 10rem;
                     height: 10rem;
                     object-fit: cover;
-                    fill: $colorWhite;
-                    background: $colorPrimary;
+                    fill: $colorPrimary;
+                    background: $colorWhite;
                     padding: 1rem;
                     
                 }
@@ -74,12 +88,14 @@
                 padding: 1rem 0;
                 font-size: 1.3rem;
                 font-weight: 600;
-                color: $colorPrimary;
+                color: $colorWhite;
             }
 
             &__details {
                 text-align: center;
                 width: 90%;
+                transform: translateX(5%);
+             
              
             }
         }

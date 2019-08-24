@@ -103,7 +103,7 @@ var introBgMove = new TimelineMax()
 
 introBgMove
          .to('.intro', 1, {y: -60, ease:  Power2.easeOut}, '-=.5')
-         .to('.offer', 1, {y: -60, ease:  Power2.easeOut}, '-=1')
+         .to('.services', 1, {y: -60, ease:  Power2.easeOut}, '-=1')
 
 var controller = new ScrollMagic.Controller();
     
@@ -140,7 +140,7 @@ $(window).on("scroll", function() {
       var controller = new ScrollMagic.Controller();
           
       var intros = new ScrollMagic.Scene({
-                      triggerElement:'.offer',
+                      triggerElement:'.services',
                       trigerHook: 0,
                   })
                   .setTween(navBgchange)
