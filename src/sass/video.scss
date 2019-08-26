@@ -1,0 +1,64 @@
+.video {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+ 
+    
+
+        &__container {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.932);
+
+            opacity: 0;
+           
+        }
+
+        &__video {
+            width: 90%;
+            height: 80%;              
+            border-radius: 5px;
+        }
+
+
+    
+    &__text {
+        height: 100%;
+        width: 100%;
+        color: $colorWhite;
+        background-image: 
+        linear-gradient(
+            rgba(0, 0,0, .4), 
+            rgba(0, 0, 0, .4)),
+        url('../img/poster.jpg');    
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 10;
+
+        & p {
+            margin-bottom: 2rem;
+            width: 40%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+      
+    }
+
+    & svg {
+        width: 8rem;
+        height: 8rem;
+        fill: rgba(255, 255, 255, 0.616);
+        position: relative;
+        z-index: 90000;
+    }
+}

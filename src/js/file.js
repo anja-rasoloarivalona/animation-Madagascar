@@ -36,7 +36,43 @@ $('.loader__cta.btn').click( function(){
 
 
 
+ 
+
+
+$('#video-play').click(function(ev) {
+
+        $("#video")[0].src = "https://www.youtube.com/embed/qgxFh8sqBbg?autoplay=1&mute=1";
+                ev.preventDefault();
+                
+        var videoAnim = new TimelineMax();
+                videoAnim       
+                .to('.video__text', .5, {opacity: 0, zIndex: -1})     
+                .to('.video__container', .5, {opacity: 1, zIndex: 3000})
+
+               
+
+
+        $('.video__container').click(function(){
+                var videoAnimEnd = new TimelineMax();
+                videoAnimEnd       
+
+                .to('.video__text', .5, {opacity: 1, zIndex: 10})     
+                .to('.video__container', .5, {opacity: 0, zIndex: -1})
+
+                $("#video")[0].src = "https://www.youtube.com/embed/qgxFh8sqBbg";
+                ev.preventDefault();
+        })
+    
+      });
+
+
+
+
+
+
 var open = false;
+
+
 
 $('.navbar').click( function(){
         if(!open){
